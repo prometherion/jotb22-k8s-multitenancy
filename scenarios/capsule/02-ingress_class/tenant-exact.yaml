@@ -1,0 +1,11 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: exact-ingress-class
+spec:
+  ingressClasses:
+    allowed:
+      - internal-lb
+  owners:
+  - kind: User
+    name: alice

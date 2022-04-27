@@ -1,0 +1,8 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: hostname-collision
+spec:
+  owners:
+  - kind: User
+    name: alice

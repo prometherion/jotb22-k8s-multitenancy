@@ -1,0 +1,12 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: allowed-ingress
+spec:
+  ingressHostnames:
+    allowed:
+    - www.cncf.io
+    - cncf.io
+  owners:
+  - kind: User
+    name: alice

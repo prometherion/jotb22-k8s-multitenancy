@@ -1,0 +1,10 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: pay-per-use
+spec:
+  namespaceOptions:
+    quota: 3
+  owners:
+    - kind: User
+      name: alice

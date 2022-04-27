@@ -1,0 +1,24 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: solar
+spec:
+  owners:
+  - kind: User
+    name: alice
+  networkPolicies:
+    items:
+      - podSelector: {}
+        policyTypes:
+          - Ingress
+          - Egress
+        egress:
+          - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+        ingress:
+          - from:
+            - namespaceSelector:
+                matchLabels:
+                  capsule.clastix.io/tenant: solar
+              podSelector: {}

@@ -1,0 +1,10 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: regex-ingress
+spec:
+  ingressHostnames:
+    allowedRegex: \w\.clastix\.io
+  owners:
+  - kind: User
+    name: alice

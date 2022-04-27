@@ -1,0 +1,11 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: Tenant
+metadata:
+  name: container-registry
+spec:
+  containerRegistries:
+    allowed:
+      - quay.io
+  owners:
+  - kind: User
+    name: alice
